@@ -7,6 +7,20 @@
     <groupId>uk.nhs.xlscsde.analytics.workspace.management.models</groupId>
     <artifactId>analytics-workspace-management-models</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>LSC SDE Analytics Workspace Management Models</name>
+    <description>Models used to represent custom resources defined by the LSC SDE Analytics Workspace Management Solution</description>
+    <url>https://lsc-sde.github.io/lsc-sde/</url>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://github.com/lsc-sde/java-analytics-workspace-management-models/blob/main/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://svn.apache.org/viewvc/maven</url>
+    </scm>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -20,4 +34,13 @@
             <version>15.0.1</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>

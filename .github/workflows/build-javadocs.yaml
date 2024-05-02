@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  build-and-publish:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Build javadocs"
+        run: mvn javadoc:javadoc
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "target/site/apidocs"
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
