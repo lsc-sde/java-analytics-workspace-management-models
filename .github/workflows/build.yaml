@@ -10,14 +10,19 @@ permissions:
   id-token: write
 
 jobs:
-  build-and-publish:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'microsoft'
+          java-version: '8'
+
+      - name: "Package"
+        run: mvn package
 
       - name: "Build javadocs"
         run: mvn javadoc:javadoc
@@ -26,7 +31,17 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: "target/site/apidocs"
-          
+
+
+
+  javadocs:
+    needs:
+    - build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
