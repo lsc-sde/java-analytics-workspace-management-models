@@ -6,7 +6,7 @@
 
     <groupId>io.github.lsc-sde.awms</groupId>
     <artifactId>analytics-workspace-management-models</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>LSC SDE Analytics Workspace Management Models</name>
     <description>Models used to represent custom resources defined by the LSC SDE Analytics Workspace Management Solution</description>
     <url>https://lsc-sde.github.io/lsc-sde/Secure-Data-Environment/Developers/Interoperability/Java.html</url>
@@ -44,6 +44,15 @@
             <version>15.0.1</version>
         </dependency>
     </dependencies>
+    <developers>
+        <developer>
+            <id>qcaas-nhs-sjt</id>
+            <email>shaun.turner@headinthecloudsolutions.co.uk</email>
+            <name>Shaun Turner</name>
+            <organization>Head in the Cloud Solutions Ltd</organization>
+            <organizationUrl>https://www.headinthecloudsolutions.co.uk/</organizationUrl>
+        </developer>
+    </developers>
     <build>
         <plugins>
             <plugin>
@@ -53,6 +62,7 @@
                 <executions>
                     <execution>
                         <id>attach-sources</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>jar-no-fork</goal>
                         </goals>
@@ -66,14 +76,37 @@
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-
-           
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.4.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                  <publishingServerId>central</publishingServerId>
+                  <tokenAuth>true</tokenAuth>
+                </configuration>
+              </plugin>
         </plugins>
     </build>
 </project>
