@@ -34,7 +34,7 @@ import java.util.Map;
  * Represents a jupyter workspace
  */
 @ApiModel(description = "Represents a jupyter workspace")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-02T15:57:44.209Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-16T10:18:02.634Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceSpecJupyterWorkspace {
   public static final String SERIALIZED_NAME_ADDITIONAL_STORAGE = "additionalStorage";
   @SerializedName(SERIALIZED_NAME_ADDITIONAL_STORAGE)
@@ -66,7 +66,7 @@ public class V1AnalyticsWorkspaceSpecJupyterWorkspace {
 
   public static final String SERIALIZED_NAME_TOLERATIONS = "tolerations";
   @SerializedName(SERIALIZED_NAME_TOLERATIONS)
-  private Object tolerations;
+  private List<Object> tolerations = null;
 
 
   public V1AnalyticsWorkspaceSpecJupyterWorkspace additionalStorage(List<V1AnalyticsWorkspaceSpecJupyterWorkspaceAdditionalStorage> additionalStorage) {
@@ -245,9 +245,17 @@ public class V1AnalyticsWorkspaceSpecJupyterWorkspace {
   }
 
 
-  public V1AnalyticsWorkspaceSpecJupyterWorkspace tolerations(Object tolerations) {
+  public V1AnalyticsWorkspaceSpecJupyterWorkspace tolerations(List<Object> tolerations) {
     
     this.tolerations = tolerations;
+    return this;
+  }
+
+  public V1AnalyticsWorkspaceSpecJupyterWorkspace addTolerationsItem(Object tolerationsItem) {
+    if (this.tolerations == null) {
+      this.tolerations = new ArrayList<>();
+    }
+    this.tolerations.add(tolerationsItem);
     return this;
   }
 
@@ -258,12 +266,12 @@ public class V1AnalyticsWorkspaceSpecJupyterWorkspace {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getTolerations() {
+  public List<Object> getTolerations() {
     return tolerations;
   }
 
 
-  public void setTolerations(Object tolerations) {
+  public void setTolerations(List<Object> tolerations) {
     this.tolerations = tolerations;
   }
 

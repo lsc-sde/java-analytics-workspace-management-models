@@ -29,7 +29,7 @@ import java.time.LocalDate;
  * REQUIRED. An object describing variables which are validated to ensure that the workspace is still valid
  */
 @ApiModel(description = "REQUIRED. An object describing variables which are validated to ensure that the workspace is still valid")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-02T15:57:44.209Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-16T10:18:02.634Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceSpecValidity {
   public static final String SERIALIZED_NAME_AVAILABLE_FROM = "availableFrom";
   @SerializedName(SERIALIZED_NAME_AVAILABLE_FROM)

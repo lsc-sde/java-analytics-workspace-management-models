@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * V1AnalyticsWorkspaceBindingSpec
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-02T15:57:44.209Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-16T10:18:02.634Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceBindingSpec {
   public static final String SERIALIZED_NAME_CLAIMS = "claims";
   @SerializedName(SERIALIZED_NAME_CLAIMS)
