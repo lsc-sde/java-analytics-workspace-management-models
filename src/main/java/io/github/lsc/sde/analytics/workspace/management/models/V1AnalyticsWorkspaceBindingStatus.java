@@ -27,11 +27,92 @@ import java.io.IOException;
 /**
  * V1AnalyticsWorkspaceBindingStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-16T10:18:02.634Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-09-17T08:31:32.066Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceBindingStatus {
+  public static final String SERIALIZED_NAME_DEPLOYMENT_NAME = "deploymentName";
+  @SerializedName(SERIALIZED_NAME_DEPLOYMENT_NAME)
+  private String deploymentName;
+
+  public static final String SERIALIZED_NAME_LAST_ACTIVE_CHECK = "lastActiveCheck";
+  @SerializedName(SERIALIZED_NAME_LAST_ACTIVE_CHECK)
+  private String lastActiveCheck;
+
+  public static final String SERIALIZED_NAME_REPLICAS = "replicas";
+  @SerializedName(SERIALIZED_NAME_REPLICAS)
+  private Integer replicas;
+
   public static final String SERIALIZED_NAME_STATUS_TEXT = "statusText";
   @SerializedName(SERIALIZED_NAME_STATUS_TEXT)
   private String statusText;
+
+
+  public V1AnalyticsWorkspaceBindingStatus deploymentName(String deploymentName) {
+    
+    this.deploymentName = deploymentName;
+    return this;
+  }
+
+   /**
+   * Get deploymentName
+   * @return deploymentName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDeploymentName() {
+    return deploymentName;
+  }
+
+
+  public void setDeploymentName(String deploymentName) {
+    this.deploymentName = deploymentName;
+  }
+
+
+  public V1AnalyticsWorkspaceBindingStatus lastActiveCheck(String lastActiveCheck) {
+    
+    this.lastActiveCheck = lastActiveCheck;
+    return this;
+  }
+
+   /**
+   * Get lastActiveCheck
+   * @return lastActiveCheck
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastActiveCheck() {
+    return lastActiveCheck;
+  }
+
+
+  public void setLastActiveCheck(String lastActiveCheck) {
+    this.lastActiveCheck = lastActiveCheck;
+  }
+
+
+  public V1AnalyticsWorkspaceBindingStatus replicas(Integer replicas) {
+    
+    this.replicas = replicas;
+    return this;
+  }
+
+   /**
+   * Get replicas
+   * @return replicas
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getReplicas() {
+    return replicas;
+  }
+
+
+  public void setReplicas(Integer replicas) {
+    this.replicas = replicas;
+  }
 
 
   public V1AnalyticsWorkspaceBindingStatus statusText(String statusText) {
@@ -66,12 +147,15 @@ public class V1AnalyticsWorkspaceBindingStatus {
       return false;
     }
     V1AnalyticsWorkspaceBindingStatus v1AnalyticsWorkspaceBindingStatus = (V1AnalyticsWorkspaceBindingStatus) o;
-    return Objects.equals(this.statusText, v1AnalyticsWorkspaceBindingStatus.statusText);
+    return Objects.equals(this.deploymentName, v1AnalyticsWorkspaceBindingStatus.deploymentName) &&
+        Objects.equals(this.lastActiveCheck, v1AnalyticsWorkspaceBindingStatus.lastActiveCheck) &&
+        Objects.equals(this.replicas, v1AnalyticsWorkspaceBindingStatus.replicas) &&
+        Objects.equals(this.statusText, v1AnalyticsWorkspaceBindingStatus.statusText);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(statusText);
+    return Objects.hash(deploymentName, lastActiveCheck, replicas, statusText);
   }
 
 
@@ -79,6 +163,9 @@ public class V1AnalyticsWorkspaceBindingStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class V1AnalyticsWorkspaceBindingStatus {\n");
+    sb.append("    deploymentName: ").append(toIndentedString(deploymentName)).append("\n");
+    sb.append("    lastActiveCheck: ").append(toIndentedString(lastActiveCheck)).append("\n");
+    sb.append("    replicas: ").append(toIndentedString(replicas)).append("\n");
     sb.append("    statusText: ").append(toIndentedString(statusText)).append("\n");
     sb.append("}");
     return sb.toString();

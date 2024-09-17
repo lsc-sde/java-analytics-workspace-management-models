@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * V1AnalyticsWorkspaceSpec
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-16T10:18:02.634Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-09-17T08:31:32.066Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceSpec {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)

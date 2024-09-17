@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * V1AnalyticsWorkspaceBindingSpec
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-16T10:18:02.634Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-09-17T08:31:32.066Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceBindingSpec {
   public static final String SERIALIZED_NAME_CLAIMS = "claims";
   @SerializedName(SERIALIZED_NAME_CLAIMS)
@@ -44,6 +44,10 @@ public class V1AnalyticsWorkspaceBindingSpec {
   public static final String SERIALIZED_NAME_EXPIRES = "expires";
   @SerializedName(SERIALIZED_NAME_EXPIRES)
   private LocalDate expires;
+
+  public static final String SERIALIZED_NAME_REPLICAS = "replicas";
+  @SerializedName(SERIALIZED_NAME_REPLICAS)
+  private Integer replicas;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
@@ -130,6 +134,29 @@ public class V1AnalyticsWorkspaceBindingSpec {
   }
 
 
+  public V1AnalyticsWorkspaceBindingSpec replicas(Integer replicas) {
+    
+    this.replicas = replicas;
+    return this;
+  }
+
+   /**
+   * The number of replicas to be setup by this resource
+   * @return replicas
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The number of replicas to be setup by this resource")
+
+  public Integer getReplicas() {
+    return replicas;
+  }
+
+
+  public void setReplicas(Integer replicas) {
+    this.replicas = replicas;
+  }
+
+
   public V1AnalyticsWorkspaceBindingSpec username(String username) {
     
     this.username = username;
@@ -187,13 +214,14 @@ public class V1AnalyticsWorkspaceBindingSpec {
     return Objects.equals(this.claims, v1AnalyticsWorkspaceBindingSpec.claims) &&
         Objects.equals(this.comments, v1AnalyticsWorkspaceBindingSpec.comments) &&
         Objects.equals(this.expires, v1AnalyticsWorkspaceBindingSpec.expires) &&
+        Objects.equals(this.replicas, v1AnalyticsWorkspaceBindingSpec.replicas) &&
         Objects.equals(this.username, v1AnalyticsWorkspaceBindingSpec.username) &&
         Objects.equals(this.workspace, v1AnalyticsWorkspaceBindingSpec.workspace);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(claims, comments, expires, username, workspace);
+    return Objects.hash(claims, comments, expires, replicas, username, workspace);
   }
 
 
@@ -204,6 +232,7 @@ public class V1AnalyticsWorkspaceBindingSpec {
     sb.append("    claims: ").append(toIndentedString(claims)).append("\n");
     sb.append("    comments: ").append(toIndentedString(comments)).append("\n");
     sb.append("    expires: ").append(toIndentedString(expires)).append("\n");
+    sb.append("    replicas: ").append(toIndentedString(replicas)).append("\n");
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    workspace: ").append(toIndentedString(workspace)).append("\n");
     sb.append("}");
