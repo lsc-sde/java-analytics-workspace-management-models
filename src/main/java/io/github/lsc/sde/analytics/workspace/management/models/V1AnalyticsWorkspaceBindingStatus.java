@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1AnalyticsWorkspaceBindingStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-09-17T08:31:32.066Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-14T14:18:25.662Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceBindingStatus {
   public static final String SERIALIZED_NAME_DEPLOYMENT_NAME = "deploymentName";
   @SerializedName(SERIALIZED_NAME_DEPLOYMENT_NAME)
