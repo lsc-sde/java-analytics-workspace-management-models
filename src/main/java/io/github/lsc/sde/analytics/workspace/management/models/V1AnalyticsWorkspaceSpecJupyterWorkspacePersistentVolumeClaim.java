@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1AnalyticsWorkspaceSpecJupyterWorkspacePersistentVolumeClaim
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-11T11:54:12.572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-12T12:18:31.084Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceSpecJupyterWorkspacePersistentVolumeClaim {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
