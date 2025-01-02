@@ -34,7 +34,7 @@ import java.util.Map;
  * Represents a jupyter workspace
  */
 @ApiModel(description = "Represents a jupyter workspace")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-02T10:14:00.712Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-02T10:23:42.992Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceSpecJupyterWorkspace {
   public static final String SERIALIZED_NAME_ADDITIONAL_STORAGE = "additionalStorage";
   @SerializedName(SERIALIZED_NAME_ADDITIONAL_STORAGE)

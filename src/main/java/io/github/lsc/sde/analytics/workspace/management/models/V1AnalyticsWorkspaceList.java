@@ -32,7 +32,7 @@ import java.util.List;
  * AnalyticsWorkspaceList is a list of AnalyticsWorkspace
  */
 @ApiModel(description = "AnalyticsWorkspaceList is a list of AnalyticsWorkspace")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-02T10:14:00.712Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-02T10:23:42.992Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceList implements io.kubernetes.client.common.KubernetesListObject {
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
   @SerializedName(SERIALIZED_NAME_API_VERSION)
