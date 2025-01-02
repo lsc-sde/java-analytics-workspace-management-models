@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1AnalyticsWorkspaceSpecJupyterWorkspaceAdditionalStorage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-02T12:28:24.145Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-02T13:36:45.687Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceSpecJupyterWorkspaceAdditionalStorage {
   public static final String SERIALIZED_NAME_MOUNT_PATH = "mountPath";
   @SerializedName(SERIALIZED_NAME_MOUNT_PATH)
