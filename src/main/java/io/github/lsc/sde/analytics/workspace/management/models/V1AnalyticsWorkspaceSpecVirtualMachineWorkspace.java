@@ -28,7 +28,7 @@ import java.io.IOException;
  * This is not yet implemented, it is to test validation of the CRD is functioning correctly
  */
 @ApiModel(description = "This is not yet implemented, it is to test validation of the CRD is functioning correctly")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-02T10:23:42.992Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-02T11:28:44.450Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {
   public static final String SERIALIZED_NAME_MAX_HOSTS = "maxHosts";
   @SerializedName(SERIALIZED_NAME_MAX_HOSTS)
