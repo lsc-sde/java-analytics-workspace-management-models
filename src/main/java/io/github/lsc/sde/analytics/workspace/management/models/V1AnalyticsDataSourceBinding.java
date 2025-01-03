@@ -20,7 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.github.lsc.sde.analytics.workspace.management.models.IoK8sApimachineryPkgApisMetaV1ObjectMetaV2;
 import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsDataSourceBindingSpec;
 import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsDataSourceBindingStatus;
 import io.swagger.annotations.ApiModel;
@@ -31,7 +30,7 @@ import java.io.IOException;
  * V1AnalyticsDataSourceBinding
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsDataSourceBinding {
+public class V1AnalyticsDataSourceBinding implements io.kubernetes.client.common.KubernetesObject  {
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
   @SerializedName(SERIALIZED_NAME_API_VERSION)
   private String apiVersion;
@@ -42,7 +41,7 @@ public class V1AnalyticsDataSourceBinding {
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
-  private IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata = null;
+  private io.kubernetes.client.openapi.models.V1ObjectMeta metadata = null;
 
   public static final String SERIALIZED_NAME_SPEC = "spec";
   @SerializedName(SERIALIZED_NAME_SPEC)
@@ -99,7 +98,7 @@ public class V1AnalyticsDataSourceBinding {
   }
 
 
-  public V1AnalyticsDataSourceBinding metadata(IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata) {
+  public V1AnalyticsDataSourceBinding metadata(io.kubernetes.client.openapi.models.V1ObjectMeta metadata) {
     
     this.metadata = metadata;
     return this;
@@ -112,12 +111,12 @@ public class V1AnalyticsDataSourceBinding {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 getMetadata() {
+  public io.kubernetes.client.openapi.models.V1ObjectMeta getMetadata() {
     return metadata;
   }
 
 
-  public void setMetadata(IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata) {
+  public void setMetadata(io.kubernetes.client.openapi.models.V1ObjectMeta metadata) {
     this.metadata = metadata;
   }
 
