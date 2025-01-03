@@ -20,41 +20,68 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsDataSourceSpecRoCrateRepo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * This is not yet implemented, it is to test validation of the CRD is functioning correctly
+ * V1AnalyticsDataSourceSpecRoCrate
  */
-@ApiModel(description = "This is not yet implemented, it is to test validation of the CRD is functioning correctly")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {
-  public static final String SERIALIZED_NAME_MAX_HOSTS = "maxHosts";
-  @SerializedName(SERIALIZED_NAME_MAX_HOSTS)
-  private Object maxHosts;
+public class V1AnalyticsDataSourceSpecRoCrate {
+  public static final String SERIALIZED_NAME_REPO = "repo";
+  @SerializedName(SERIALIZED_NAME_REPO)
+  private V1AnalyticsDataSourceSpecRoCrateRepo repo;
+
+  public static final String SERIALIZED_NAME_SPEC = "spec";
+  @SerializedName(SERIALIZED_NAME_SPEC)
+  private Object spec;
 
 
-  public V1AnalyticsWorkspaceSpecVirtualMachineWorkspace maxHosts(Object maxHosts) {
+  public V1AnalyticsDataSourceSpecRoCrate repo(V1AnalyticsDataSourceSpecRoCrateRepo repo) {
     
-    this.maxHosts = maxHosts;
+    this.repo = repo;
     return this;
   }
 
    /**
-   * The maximum number of hosts
-   * @return maxHosts
+   * Get repo
+   * @return repo
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The maximum number of hosts")
+  @ApiModelProperty(value = "")
 
-  public Object getMaxHosts() {
-    return maxHosts;
+  public V1AnalyticsDataSourceSpecRoCrateRepo getRepo() {
+    return repo;
   }
 
 
-  public void setMaxHosts(Object maxHosts) {
-    this.maxHosts = maxHosts;
+  public void setRepo(V1AnalyticsDataSourceSpecRoCrateRepo repo) {
+    this.repo = repo;
+  }
+
+
+  public V1AnalyticsDataSourceSpecRoCrate spec(Object spec) {
+    
+    this.spec = spec;
+    return this;
+  }
+
+   /**
+   * Get spec
+   * @return spec
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Object getSpec() {
+    return spec;
+  }
+
+
+  public void setSpec(Object spec) {
+    this.spec = spec;
   }
 
 
@@ -66,21 +93,23 @@ public class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspaceSpecVirtualMachineWorkspace v1AnalyticsWorkspaceSpecVirtualMachineWorkspace = (V1AnalyticsWorkspaceSpecVirtualMachineWorkspace) o;
-    return Objects.equals(this.maxHosts, v1AnalyticsWorkspaceSpecVirtualMachineWorkspace.maxHosts);
+    V1AnalyticsDataSourceSpecRoCrate v1AnalyticsDataSourceSpecRoCrate = (V1AnalyticsDataSourceSpecRoCrate) o;
+    return Objects.equals(this.repo, v1AnalyticsDataSourceSpecRoCrate.repo) &&
+        Objects.equals(this.spec, v1AnalyticsDataSourceSpecRoCrate.spec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(maxHosts);
+    return Objects.hash(repo, spec);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {\n");
-    sb.append("    maxHosts: ").append(toIndentedString(maxHosts)).append("\n");
+    sb.append("class V1AnalyticsDataSourceSpecRoCrate {\n");
+    sb.append("    repo: ").append(toIndentedString(repo)).append("\n");
+    sb.append("    spec: ").append(toIndentedString(spec)).append("\n");
     sb.append("}");
     return sb.toString();
   }

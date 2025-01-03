@@ -21,17 +21,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.github.lsc.sde.analytics.workspace.management.models.IoK8sApimachineryPkgApisMetaV1ObjectMetaV2;
-import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsWorkspaceSpec;
-import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsWorkspaceStatus;
+import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsDataSourceBindingSpec;
+import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsDataSourceBindingStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * V1AnalyticsWorkspace
+ * V1AnalyticsDataSourceBinding
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspace {
+public class V1AnalyticsDataSourceBinding {
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
   @SerializedName(SERIALIZED_NAME_API_VERSION)
   private String apiVersion;
@@ -46,14 +46,14 @@ public class V1AnalyticsWorkspace {
 
   public static final String SERIALIZED_NAME_SPEC = "spec";
   @SerializedName(SERIALIZED_NAME_SPEC)
-  private V1AnalyticsWorkspaceSpec spec;
+  private V1AnalyticsDataSourceBindingSpec spec;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
-  private V1AnalyticsWorkspaceStatus status;
+  private V1AnalyticsDataSourceBindingStatus status;
 
 
-  public V1AnalyticsWorkspace apiVersion(String apiVersion) {
+  public V1AnalyticsDataSourceBinding apiVersion(String apiVersion) {
     
     this.apiVersion = apiVersion;
     return this;
@@ -76,7 +76,7 @@ public class V1AnalyticsWorkspace {
   }
 
 
-  public V1AnalyticsWorkspace kind(String kind) {
+  public V1AnalyticsDataSourceBinding kind(String kind) {
     
     this.kind = kind;
     return this;
@@ -99,7 +99,7 @@ public class V1AnalyticsWorkspace {
   }
 
 
-  public V1AnalyticsWorkspace metadata(IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata) {
+  public V1AnalyticsDataSourceBinding metadata(IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata) {
     
     this.metadata = metadata;
     return this;
@@ -122,7 +122,7 @@ public class V1AnalyticsWorkspace {
   }
 
 
-  public V1AnalyticsWorkspace spec(V1AnalyticsWorkspaceSpec spec) {
+  public V1AnalyticsDataSourceBinding spec(V1AnalyticsDataSourceBindingSpec spec) {
     
     this.spec = spec;
     return this;
@@ -135,17 +135,17 @@ public class V1AnalyticsWorkspace {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public V1AnalyticsWorkspaceSpec getSpec() {
+  public V1AnalyticsDataSourceBindingSpec getSpec() {
     return spec;
   }
 
 
-  public void setSpec(V1AnalyticsWorkspaceSpec spec) {
+  public void setSpec(V1AnalyticsDataSourceBindingSpec spec) {
     this.spec = spec;
   }
 
 
-  public V1AnalyticsWorkspace status(V1AnalyticsWorkspaceStatus status) {
+  public V1AnalyticsDataSourceBinding status(V1AnalyticsDataSourceBindingStatus status) {
     
     this.status = status;
     return this;
@@ -158,12 +158,12 @@ public class V1AnalyticsWorkspace {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public V1AnalyticsWorkspaceStatus getStatus() {
+  public V1AnalyticsDataSourceBindingStatus getStatus() {
     return status;
   }
 
 
-  public void setStatus(V1AnalyticsWorkspaceStatus status) {
+  public void setStatus(V1AnalyticsDataSourceBindingStatus status) {
     this.status = status;
   }
 
@@ -176,12 +176,12 @@ public class V1AnalyticsWorkspace {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspace v1AnalyticsWorkspace = (V1AnalyticsWorkspace) o;
-    return Objects.equals(this.apiVersion, v1AnalyticsWorkspace.apiVersion) &&
-        Objects.equals(this.kind, v1AnalyticsWorkspace.kind) &&
-        Objects.equals(this.metadata, v1AnalyticsWorkspace.metadata) &&
-        Objects.equals(this.spec, v1AnalyticsWorkspace.spec) &&
-        Objects.equals(this.status, v1AnalyticsWorkspace.status);
+    V1AnalyticsDataSourceBinding v1AnalyticsDataSourceBinding = (V1AnalyticsDataSourceBinding) o;
+    return Objects.equals(this.apiVersion, v1AnalyticsDataSourceBinding.apiVersion) &&
+        Objects.equals(this.kind, v1AnalyticsDataSourceBinding.kind) &&
+        Objects.equals(this.metadata, v1AnalyticsDataSourceBinding.metadata) &&
+        Objects.equals(this.spec, v1AnalyticsDataSourceBinding.spec) &&
+        Objects.equals(this.status, v1AnalyticsDataSourceBinding.status);
   }
 
   @Override
@@ -193,7 +193,7 @@ public class V1AnalyticsWorkspace {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspace {\n");
+    sb.append("class V1AnalyticsDataSourceBinding {\n");
     sb.append("    apiVersion: ").append(toIndentedString(apiVersion)).append("\n");
     sb.append("    kind: ").append(toIndentedString(kind)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");

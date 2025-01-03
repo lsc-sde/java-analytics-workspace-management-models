@@ -25,35 +25,31 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * V1AnalyticsWorkspaceBindingSpecClaims
+ * V1AnalyticsDataSourceSpecPublisherContact
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspaceBindingSpecClaims {
+public class V1AnalyticsDataSourceSpecPublisherContact {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
-  public static final String SERIALIZED_NAME_OPERATOR = "operator";
-  @SerializedName(SERIALIZED_NAME_OPERATOR)
-  private String operator;
-
-  public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
-  private String value;
+  public static final String SERIALIZED_NAME_ROLE = "role";
+  @SerializedName(SERIALIZED_NAME_ROLE)
+  private String role;
 
 
-  public V1AnalyticsWorkspaceBindingSpecClaims name(String name) {
+  public V1AnalyticsDataSourceSpecPublisherContact name(String name) {
     
     this.name = name;
     return this;
   }
 
    /**
-   * The name of the claim to look for
+   * Name of the contact
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the claim to look for")
+  @ApiModelProperty(value = "Name of the contact")
 
   public String getName() {
     return name;
@@ -65,49 +61,26 @@ public class V1AnalyticsWorkspaceBindingSpecClaims {
   }
 
 
-  public V1AnalyticsWorkspaceBindingSpecClaims operator(String operator) {
+  public V1AnalyticsDataSourceSpecPublisherContact role(String role) {
     
-    this.operator = operator;
+    this.role = role;
     return this;
   }
 
    /**
-   * The operator to match
-   * @return operator
+   * The role of this contact
+   * @return role
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The operator to match")
+  @ApiModelProperty(value = "The role of this contact")
 
-  public String getOperator() {
-    return operator;
+  public String getRole() {
+    return role;
   }
 
 
-  public void setOperator(String operator) {
-    this.operator = operator;
-  }
-
-
-  public V1AnalyticsWorkspaceBindingSpecClaims value(String value) {
-    
-    this.value = value;
-    return this;
-  }
-
-   /**
-   * The value to match against
-   * @return value
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The value to match against")
-
-  public String getValue() {
-    return value;
-  }
-
-
-  public void setValue(String value) {
-    this.value = value;
+  public void setRole(String role) {
+    this.role = role;
   }
 
 
@@ -119,25 +92,23 @@ public class V1AnalyticsWorkspaceBindingSpecClaims {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspaceBindingSpecClaims v1AnalyticsWorkspaceBindingSpecClaims = (V1AnalyticsWorkspaceBindingSpecClaims) o;
-    return Objects.equals(this.name, v1AnalyticsWorkspaceBindingSpecClaims.name) &&
-        Objects.equals(this.operator, v1AnalyticsWorkspaceBindingSpecClaims.operator) &&
-        Objects.equals(this.value, v1AnalyticsWorkspaceBindingSpecClaims.value);
+    V1AnalyticsDataSourceSpecPublisherContact v1AnalyticsDataSourceSpecPublisherContact = (V1AnalyticsDataSourceSpecPublisherContact) o;
+    return Objects.equals(this.name, v1AnalyticsDataSourceSpecPublisherContact.name) &&
+        Objects.equals(this.role, v1AnalyticsDataSourceSpecPublisherContact.role);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, operator, value);
+    return Objects.hash(name, role);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspaceBindingSpecClaims {\n");
+    sb.append("class V1AnalyticsDataSourceSpecPublisherContact {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    operator: ").append(toIndentedString(operator)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    role: ").append(toIndentedString(role)).append("\n");
     sb.append("}");
     return sb.toString();
   }

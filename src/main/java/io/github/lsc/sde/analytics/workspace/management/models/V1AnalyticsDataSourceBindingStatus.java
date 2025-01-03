@@ -25,51 +25,20 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * V1AnalyticsWorkspaceBindingStatus
+ * V1AnalyticsDataSourceBindingStatus
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspaceBindingStatus {
-  public static final String SERIALIZED_NAME_DEPLOYMENT_NAME = "deploymentName";
-  @SerializedName(SERIALIZED_NAME_DEPLOYMENT_NAME)
-  private String deploymentName;
-
+public class V1AnalyticsDataSourceBindingStatus {
   public static final String SERIALIZED_NAME_LAST_ACTIVE_CHECK = "lastActiveCheck";
   @SerializedName(SERIALIZED_NAME_LAST_ACTIVE_CHECK)
   private String lastActiveCheck;
-
-  public static final String SERIALIZED_NAME_REPLICAS = "replicas";
-  @SerializedName(SERIALIZED_NAME_REPLICAS)
-  private Integer replicas;
 
   public static final String SERIALIZED_NAME_STATUS_TEXT = "statusText";
   @SerializedName(SERIALIZED_NAME_STATUS_TEXT)
   private String statusText;
 
 
-  public V1AnalyticsWorkspaceBindingStatus deploymentName(String deploymentName) {
-    
-    this.deploymentName = deploymentName;
-    return this;
-  }
-
-   /**
-   * Get deploymentName
-   * @return deploymentName
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getDeploymentName() {
-    return deploymentName;
-  }
-
-
-  public void setDeploymentName(String deploymentName) {
-    this.deploymentName = deploymentName;
-  }
-
-
-  public V1AnalyticsWorkspaceBindingStatus lastActiveCheck(String lastActiveCheck) {
+  public V1AnalyticsDataSourceBindingStatus lastActiveCheck(String lastActiveCheck) {
     
     this.lastActiveCheck = lastActiveCheck;
     return this;
@@ -92,30 +61,7 @@ public class V1AnalyticsWorkspaceBindingStatus {
   }
 
 
-  public V1AnalyticsWorkspaceBindingStatus replicas(Integer replicas) {
-    
-    this.replicas = replicas;
-    return this;
-  }
-
-   /**
-   * Get replicas
-   * @return replicas
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getReplicas() {
-    return replicas;
-  }
-
-
-  public void setReplicas(Integer replicas) {
-    this.replicas = replicas;
-  }
-
-
-  public V1AnalyticsWorkspaceBindingStatus statusText(String statusText) {
+  public V1AnalyticsDataSourceBindingStatus statusText(String statusText) {
     
     this.statusText = statusText;
     return this;
@@ -146,26 +92,22 @@ public class V1AnalyticsWorkspaceBindingStatus {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspaceBindingStatus v1AnalyticsWorkspaceBindingStatus = (V1AnalyticsWorkspaceBindingStatus) o;
-    return Objects.equals(this.deploymentName, v1AnalyticsWorkspaceBindingStatus.deploymentName) &&
-        Objects.equals(this.lastActiveCheck, v1AnalyticsWorkspaceBindingStatus.lastActiveCheck) &&
-        Objects.equals(this.replicas, v1AnalyticsWorkspaceBindingStatus.replicas) &&
-        Objects.equals(this.statusText, v1AnalyticsWorkspaceBindingStatus.statusText);
+    V1AnalyticsDataSourceBindingStatus v1AnalyticsDataSourceBindingStatus = (V1AnalyticsDataSourceBindingStatus) o;
+    return Objects.equals(this.lastActiveCheck, v1AnalyticsDataSourceBindingStatus.lastActiveCheck) &&
+        Objects.equals(this.statusText, v1AnalyticsDataSourceBindingStatus.statusText);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deploymentName, lastActiveCheck, replicas, statusText);
+    return Objects.hash(lastActiveCheck, statusText);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspaceBindingStatus {\n");
-    sb.append("    deploymentName: ").append(toIndentedString(deploymentName)).append("\n");
+    sb.append("class V1AnalyticsDataSourceBindingStatus {\n");
     sb.append("    lastActiveCheck: ").append(toIndentedString(lastActiveCheck)).append("\n");
-    sb.append("    replicas: ").append(toIndentedString(replicas)).append("\n");
     sb.append("    statusText: ").append(toIndentedString(statusText)).append("\n");
     sb.append("}");
     return sb.toString();

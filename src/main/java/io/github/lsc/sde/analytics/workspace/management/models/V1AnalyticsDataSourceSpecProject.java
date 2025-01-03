@@ -25,36 +25,35 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * This is not yet implemented, it is to test validation of the CRD is functioning correctly
+ * V1AnalyticsDataSourceSpecProject
  */
-@ApiModel(description = "This is not yet implemented, it is to test validation of the CRD is functioning correctly")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {
-  public static final String SERIALIZED_NAME_MAX_HOSTS = "maxHosts";
-  @SerializedName(SERIALIZED_NAME_MAX_HOSTS)
-  private Object maxHosts;
+public class V1AnalyticsDataSourceSpecProject {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
-  public V1AnalyticsWorkspaceSpecVirtualMachineWorkspace maxHosts(Object maxHosts) {
+  public V1AnalyticsDataSourceSpecProject id(String id) {
     
-    this.maxHosts = maxHosts;
+    this.id = id;
     return this;
   }
 
    /**
-   * The maximum number of hosts
-   * @return maxHosts
+   * The Unique ID of the project in question
+   * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The maximum number of hosts")
+  @ApiModelProperty(value = "The Unique ID of the project in question")
 
-  public Object getMaxHosts() {
-    return maxHosts;
+  public String getId() {
+    return id;
   }
 
 
-  public void setMaxHosts(Object maxHosts) {
-    this.maxHosts = maxHosts;
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -66,21 +65,21 @@ public class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspaceSpecVirtualMachineWorkspace v1AnalyticsWorkspaceSpecVirtualMachineWorkspace = (V1AnalyticsWorkspaceSpecVirtualMachineWorkspace) o;
-    return Objects.equals(this.maxHosts, v1AnalyticsWorkspaceSpecVirtualMachineWorkspace.maxHosts);
+    V1AnalyticsDataSourceSpecProject v1AnalyticsDataSourceSpecProject = (V1AnalyticsDataSourceSpecProject) o;
+    return Objects.equals(this.id, v1AnalyticsDataSourceSpecProject.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(maxHosts);
+    return Objects.hash(id);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {\n");
-    sb.append("    maxHosts: ").append(toIndentedString(maxHosts)).append("\n");
+    sb.append("class V1AnalyticsDataSourceSpecProject {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();
   }

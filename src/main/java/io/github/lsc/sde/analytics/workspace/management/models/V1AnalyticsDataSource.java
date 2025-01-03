@@ -20,27 +20,21 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsWorkspaceBinding;
-import io.kubernetes.client.openapi.models.V1ListMeta;
+import io.github.lsc.sde.analytics.workspace.management.models.IoK8sApimachineryPkgApisMetaV1ObjectMetaV2;
+import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsDataSourceSpec;
+import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsDataSourceStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * AnalyticsWorkspaceBindingList is a list of AnalyticsWorkspaceBinding
+ * V1AnalyticsDataSource
  */
-@ApiModel(description = "AnalyticsWorkspaceBindingList is a list of AnalyticsWorkspaceBinding")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.common.KubernetesListObject {
+public class V1AnalyticsDataSource {
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
   @SerializedName(SERIALIZED_NAME_API_VERSION)
   private String apiVersion;
-
-  public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
-  private List<V1AnalyticsWorkspaceBinding> items = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_KIND = "kind";
   @SerializedName(SERIALIZED_NAME_KIND)
@@ -48,10 +42,18 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
-  private V1ListMeta metadata = null;
+  private IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata = null;
+
+  public static final String SERIALIZED_NAME_SPEC = "spec";
+  @SerializedName(SERIALIZED_NAME_SPEC)
+  private V1AnalyticsDataSourceSpec spec;
+
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  private V1AnalyticsDataSourceStatus status;
 
 
-  public V1AnalyticsWorkspaceBindingList apiVersion(String apiVersion) {
+  public V1AnalyticsDataSource apiVersion(String apiVersion) {
     
     this.apiVersion = apiVersion;
     return this;
@@ -74,34 +76,7 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
   }
 
 
-  public V1AnalyticsWorkspaceBindingList items(List<V1AnalyticsWorkspaceBinding> items) {
-    
-    this.items = items;
-    return this;
-  }
-
-  public V1AnalyticsWorkspaceBindingList addItemsItem(V1AnalyticsWorkspaceBinding itemsItem) {
-    this.items.add(itemsItem);
-    return this;
-  }
-
-   /**
-   * List of analyticsworkspacebindings. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md
-   * @return items
-  **/
-  @ApiModelProperty(required = true, value = "List of analyticsworkspacebindings. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md")
-
-  public List<V1AnalyticsWorkspaceBinding> getItems() {
-    return items;
-  }
-
-
-  public void setItems(List<V1AnalyticsWorkspaceBinding> items) {
-    this.items = items;
-  }
-
-
-  public V1AnalyticsWorkspaceBindingList kind(String kind) {
+  public V1AnalyticsDataSource kind(String kind) {
     
     this.kind = kind;
     return this;
@@ -124,7 +99,7 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
   }
 
 
-  public V1AnalyticsWorkspaceBindingList metadata(V1ListMeta metadata) {
+  public V1AnalyticsDataSource metadata(IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata) {
     
     this.metadata = metadata;
     return this;
@@ -137,13 +112,59 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public V1ListMeta getMetadata() {
+  public IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 getMetadata() {
     return metadata;
   }
 
 
-  public void setMetadata(V1ListMeta metadata) {
+  public void setMetadata(IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata) {
     this.metadata = metadata;
+  }
+
+
+  public V1AnalyticsDataSource spec(V1AnalyticsDataSourceSpec spec) {
+    
+    this.spec = spec;
+    return this;
+  }
+
+   /**
+   * Get spec
+   * @return spec
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public V1AnalyticsDataSourceSpec getSpec() {
+    return spec;
+  }
+
+
+  public void setSpec(V1AnalyticsDataSourceSpec spec) {
+    this.spec = spec;
+  }
+
+
+  public V1AnalyticsDataSource status(V1AnalyticsDataSourceStatus status) {
+    
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public V1AnalyticsDataSourceStatus getStatus() {
+    return status;
+  }
+
+
+  public void setStatus(V1AnalyticsDataSourceStatus status) {
+    this.status = status;
   }
 
 
@@ -155,27 +176,29 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspaceBindingList v1AnalyticsWorkspaceBindingList = (V1AnalyticsWorkspaceBindingList) o;
-    return Objects.equals(this.apiVersion, v1AnalyticsWorkspaceBindingList.apiVersion) &&
-        Objects.equals(this.items, v1AnalyticsWorkspaceBindingList.items) &&
-        Objects.equals(this.kind, v1AnalyticsWorkspaceBindingList.kind) &&
-        Objects.equals(this.metadata, v1AnalyticsWorkspaceBindingList.metadata);
+    V1AnalyticsDataSource v1AnalyticsDataSource = (V1AnalyticsDataSource) o;
+    return Objects.equals(this.apiVersion, v1AnalyticsDataSource.apiVersion) &&
+        Objects.equals(this.kind, v1AnalyticsDataSource.kind) &&
+        Objects.equals(this.metadata, v1AnalyticsDataSource.metadata) &&
+        Objects.equals(this.spec, v1AnalyticsDataSource.spec) &&
+        Objects.equals(this.status, v1AnalyticsDataSource.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(apiVersion, items, kind, metadata);
+    return Objects.hash(apiVersion, kind, metadata, spec, status);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspaceBindingList {\n");
+    sb.append("class V1AnalyticsDataSource {\n");
     sb.append("    apiVersion: ").append(toIndentedString(apiVersion)).append("\n");
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("    kind: ").append(toIndentedString(kind)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    spec: ").append(toIndentedString(spec)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

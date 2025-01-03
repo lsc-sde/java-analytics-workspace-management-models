@@ -25,36 +25,35 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * This is not yet implemented, it is to test validation of the CRD is functioning correctly
+ * V1AnalyticsDataSourceSpecDatabricksConnectionServicePrinciple
  */
-@ApiModel(description = "This is not yet implemented, it is to test validation of the CRD is functioning correctly")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {
-  public static final String SERIALIZED_NAME_MAX_HOSTS = "maxHosts";
-  @SerializedName(SERIALIZED_NAME_MAX_HOSTS)
-  private Object maxHosts;
+public class V1AnalyticsDataSourceSpecDatabricksConnectionServicePrinciple {
+  public static final String SERIALIZED_NAME_SECRET_NAME = "secretName";
+  @SerializedName(SERIALIZED_NAME_SECRET_NAME)
+  private String secretName;
 
 
-  public V1AnalyticsWorkspaceSpecVirtualMachineWorkspace maxHosts(Object maxHosts) {
+  public V1AnalyticsDataSourceSpecDatabricksConnectionServicePrinciple secretName(String secretName) {
     
-    this.maxHosts = maxHosts;
+    this.secretName = secretName;
     return this;
   }
 
    /**
-   * The maximum number of hosts
-   * @return maxHosts
+   * Name of the secret that contains the oauth2 token related to this datasource
+   * @return secretName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The maximum number of hosts")
+  @ApiModelProperty(value = "Name of the secret that contains the oauth2 token related to this datasource")
 
-  public Object getMaxHosts() {
-    return maxHosts;
+  public String getSecretName() {
+    return secretName;
   }
 
 
-  public void setMaxHosts(Object maxHosts) {
-    this.maxHosts = maxHosts;
+  public void setSecretName(String secretName) {
+    this.secretName = secretName;
   }
 
 
@@ -66,21 +65,21 @@ public class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspaceSpecVirtualMachineWorkspace v1AnalyticsWorkspaceSpecVirtualMachineWorkspace = (V1AnalyticsWorkspaceSpecVirtualMachineWorkspace) o;
-    return Objects.equals(this.maxHosts, v1AnalyticsWorkspaceSpecVirtualMachineWorkspace.maxHosts);
+    V1AnalyticsDataSourceSpecDatabricksConnectionServicePrinciple v1AnalyticsDataSourceSpecDatabricksConnectionServicePrinciple = (V1AnalyticsDataSourceSpecDatabricksConnectionServicePrinciple) o;
+    return Objects.equals(this.secretName, v1AnalyticsDataSourceSpecDatabricksConnectionServicePrinciple.secretName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(maxHosts);
+    return Objects.hash(secretName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {\n");
-    sb.append("    maxHosts: ").append(toIndentedString(maxHosts)).append("\n");
+    sb.append("class V1AnalyticsDataSourceSpecDatabricksConnectionServicePrinciple {\n");
+    sb.append("    secretName: ").append(toIndentedString(secretName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -25,81 +25,54 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * V1AnalyticsWorkspaceBindingSpecClaims
+ * V1AnalyticsDataSourceSpecConnectionString
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspaceBindingSpecClaims {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-  public static final String SERIALIZED_NAME_OPERATOR = "operator";
-  @SerializedName(SERIALIZED_NAME_OPERATOR)
-  private String operator;
+public class V1AnalyticsDataSourceSpecConnectionString {
+  public static final String SERIALIZED_NAME_SECRET_NAME = "secretName";
+  @SerializedName(SERIALIZED_NAME_SECRET_NAME)
+  private String secretName;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
   private String value;
 
 
-  public V1AnalyticsWorkspaceBindingSpecClaims name(String name) {
+  public V1AnalyticsDataSourceSpecConnectionString secretName(String secretName) {
     
-    this.name = name;
+    this.secretName = secretName;
     return this;
   }
 
    /**
-   * The name of the claim to look for
-   * @return name
+   * If the connection string contains secrets, populate a secret and reference it here
+   * @return secretName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the claim to look for")
+  @ApiModelProperty(value = "If the connection string contains secrets, populate a secret and reference it here")
 
-  public String getName() {
-    return name;
+  public String getSecretName() {
+    return secretName;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setSecretName(String secretName) {
+    this.secretName = secretName;
   }
 
 
-  public V1AnalyticsWorkspaceBindingSpecClaims operator(String operator) {
-    
-    this.operator = operator;
-    return this;
-  }
-
-   /**
-   * The operator to match
-   * @return operator
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The operator to match")
-
-  public String getOperator() {
-    return operator;
-  }
-
-
-  public void setOperator(String operator) {
-    this.operator = operator;
-  }
-
-
-  public V1AnalyticsWorkspaceBindingSpecClaims value(String value) {
+  public V1AnalyticsDataSourceSpecConnectionString value(String value) {
     
     this.value = value;
     return this;
   }
 
    /**
-   * The value to match against
+   * If the connection string doesn&#39;t contain secrets, populate it here.
    * @return value
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The value to match against")
+  @ApiModelProperty(value = "If the connection string doesn't contain secrets, populate it here.")
 
   public String getValue() {
     return value;
@@ -119,24 +92,22 @@ public class V1AnalyticsWorkspaceBindingSpecClaims {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspaceBindingSpecClaims v1AnalyticsWorkspaceBindingSpecClaims = (V1AnalyticsWorkspaceBindingSpecClaims) o;
-    return Objects.equals(this.name, v1AnalyticsWorkspaceBindingSpecClaims.name) &&
-        Objects.equals(this.operator, v1AnalyticsWorkspaceBindingSpecClaims.operator) &&
-        Objects.equals(this.value, v1AnalyticsWorkspaceBindingSpecClaims.value);
+    V1AnalyticsDataSourceSpecConnectionString v1AnalyticsDataSourceSpecConnectionString = (V1AnalyticsDataSourceSpecConnectionString) o;
+    return Objects.equals(this.secretName, v1AnalyticsDataSourceSpecConnectionString.secretName) &&
+        Objects.equals(this.value, v1AnalyticsDataSourceSpecConnectionString.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, operator, value);
+    return Objects.hash(secretName, value);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspaceBindingSpecClaims {\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    operator: ").append(toIndentedString(operator)).append("\n");
+    sb.append("class V1AnalyticsDataSourceSpecConnectionString {\n");
+    sb.append("    secretName: ").append(toIndentedString(secretName)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();

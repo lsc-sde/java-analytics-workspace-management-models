@@ -25,36 +25,35 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * This is not yet implemented, it is to test validation of the CRD is functioning correctly
+ * V1AnalyticsDataSourceStatus
  */
-@ApiModel(description = "This is not yet implemented, it is to test validation of the CRD is functioning correctly")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {
-  public static final String SERIALIZED_NAME_MAX_HOSTS = "maxHosts";
-  @SerializedName(SERIALIZED_NAME_MAX_HOSTS)
-  private Object maxHosts;
+public class V1AnalyticsDataSourceStatus {
+  public static final String SERIALIZED_NAME_STATUS_TEXT = "statusText";
+  @SerializedName(SERIALIZED_NAME_STATUS_TEXT)
+  private String statusText;
 
 
-  public V1AnalyticsWorkspaceSpecVirtualMachineWorkspace maxHosts(Object maxHosts) {
+  public V1AnalyticsDataSourceStatus statusText(String statusText) {
     
-    this.maxHosts = maxHosts;
+    this.statusText = statusText;
     return this;
   }
 
    /**
-   * The maximum number of hosts
-   * @return maxHosts
+   * Get statusText
+   * @return statusText
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The maximum number of hosts")
+  @ApiModelProperty(value = "")
 
-  public Object getMaxHosts() {
-    return maxHosts;
+  public String getStatusText() {
+    return statusText;
   }
 
 
-  public void setMaxHosts(Object maxHosts) {
-    this.maxHosts = maxHosts;
+  public void setStatusText(String statusText) {
+    this.statusText = statusText;
   }
 
 
@@ -66,21 +65,21 @@ public class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspaceSpecVirtualMachineWorkspace v1AnalyticsWorkspaceSpecVirtualMachineWorkspace = (V1AnalyticsWorkspaceSpecVirtualMachineWorkspace) o;
-    return Objects.equals(this.maxHosts, v1AnalyticsWorkspaceSpecVirtualMachineWorkspace.maxHosts);
+    V1AnalyticsDataSourceStatus v1AnalyticsDataSourceStatus = (V1AnalyticsDataSourceStatus) o;
+    return Objects.equals(this.statusText, v1AnalyticsDataSourceStatus.statusText);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(maxHosts);
+    return Objects.hash(statusText);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspaceSpecVirtualMachineWorkspace {\n");
-    sb.append("    maxHosts: ").append(toIndentedString(maxHosts)).append("\n");
+    sb.append("class V1AnalyticsDataSourceStatus {\n");
+    sb.append("    statusText: ").append(toIndentedString(statusText)).append("\n");
     sb.append("}");
     return sb.toString();
   }

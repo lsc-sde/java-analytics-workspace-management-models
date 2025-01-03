@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsWorkspaceBinding;
+import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsCrate;
 import io.kubernetes.client.openapi.models.V1ListMeta;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -29,18 +29,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * AnalyticsWorkspaceBindingList is a list of AnalyticsWorkspaceBinding
+ * AnalyticsCrateList is a list of AnalyticsCrate
  */
-@ApiModel(description = "AnalyticsWorkspaceBindingList is a list of AnalyticsWorkspaceBinding")
+@ApiModel(description = "AnalyticsCrateList is a list of AnalyticsCrate")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.common.KubernetesListObject {
+public class V1AnalyticsCrateList implements io.kubernetes.client.common.KubernetesListObject {
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
   @SerializedName(SERIALIZED_NAME_API_VERSION)
   private String apiVersion;
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
-  private List<V1AnalyticsWorkspaceBinding> items = new ArrayList<>();
+  private List<V1AnalyticsCrate> items = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_KIND = "kind";
   @SerializedName(SERIALIZED_NAME_KIND)
@@ -51,7 +51,7 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
   private V1ListMeta metadata = null;
 
 
-  public V1AnalyticsWorkspaceBindingList apiVersion(String apiVersion) {
+  public V1AnalyticsCrateList apiVersion(String apiVersion) {
     
     this.apiVersion = apiVersion;
     return this;
@@ -74,34 +74,34 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
   }
 
 
-  public V1AnalyticsWorkspaceBindingList items(List<V1AnalyticsWorkspaceBinding> items) {
+  public V1AnalyticsCrateList items(List<V1AnalyticsCrate> items) {
     
     this.items = items;
     return this;
   }
 
-  public V1AnalyticsWorkspaceBindingList addItemsItem(V1AnalyticsWorkspaceBinding itemsItem) {
+  public V1AnalyticsCrateList addItemsItem(V1AnalyticsCrate itemsItem) {
     this.items.add(itemsItem);
     return this;
   }
 
    /**
-   * List of analyticsworkspacebindings. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md
+   * List of analyticscrates. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md
    * @return items
   **/
-  @ApiModelProperty(required = true, value = "List of analyticsworkspacebindings. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md")
+  @ApiModelProperty(required = true, value = "List of analyticscrates. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md")
 
-  public List<V1AnalyticsWorkspaceBinding> getItems() {
+  public List<V1AnalyticsCrate> getItems() {
     return items;
   }
 
 
-  public void setItems(List<V1AnalyticsWorkspaceBinding> items) {
+  public void setItems(List<V1AnalyticsCrate> items) {
     this.items = items;
   }
 
 
-  public V1AnalyticsWorkspaceBindingList kind(String kind) {
+  public V1AnalyticsCrateList kind(String kind) {
     
     this.kind = kind;
     return this;
@@ -124,7 +124,7 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
   }
 
 
-  public V1AnalyticsWorkspaceBindingList metadata(V1ListMeta metadata) {
+  public V1AnalyticsCrateList metadata(V1ListMeta metadata) {
     
     this.metadata = metadata;
     return this;
@@ -155,11 +155,11 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AnalyticsWorkspaceBindingList v1AnalyticsWorkspaceBindingList = (V1AnalyticsWorkspaceBindingList) o;
-    return Objects.equals(this.apiVersion, v1AnalyticsWorkspaceBindingList.apiVersion) &&
-        Objects.equals(this.items, v1AnalyticsWorkspaceBindingList.items) &&
-        Objects.equals(this.kind, v1AnalyticsWorkspaceBindingList.kind) &&
-        Objects.equals(this.metadata, v1AnalyticsWorkspaceBindingList.metadata);
+    V1AnalyticsCrateList v1AnalyticsCrateList = (V1AnalyticsCrateList) o;
+    return Objects.equals(this.apiVersion, v1AnalyticsCrateList.apiVersion) &&
+        Objects.equals(this.items, v1AnalyticsCrateList.items) &&
+        Objects.equals(this.kind, v1AnalyticsCrateList.kind) &&
+        Objects.equals(this.metadata, v1AnalyticsCrateList.metadata);
   }
 
   @Override
@@ -171,7 +171,7 @@ public class V1AnalyticsWorkspaceBindingList implements io.kubernetes.client.com
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AnalyticsWorkspaceBindingList {\n");
+    sb.append("class V1AnalyticsCrateList {\n");
     sb.append("    apiVersion: ").append(toIndentedString(apiVersion)).append("\n");
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("    kind: ").append(toIndentedString(kind)).append("\n");

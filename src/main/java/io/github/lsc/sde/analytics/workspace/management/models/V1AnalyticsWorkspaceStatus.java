@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * V1AnalyticsWorkspaceStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-02T13:36:45.687Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceStatus {
   public static final String SERIALIZED_NAME_ADDITIONAL_STORAGE = "additionalStorage";
   @SerializedName(SERIALIZED_NAME_ADDITIONAL_STORAGE)
