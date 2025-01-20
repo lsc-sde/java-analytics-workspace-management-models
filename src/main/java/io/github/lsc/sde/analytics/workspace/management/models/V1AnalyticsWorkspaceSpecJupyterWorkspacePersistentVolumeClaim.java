@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * V1AnalyticsWorkspaceSpecJupyterWorkspacePersistentVolumeClaim
+ * a description of the persistent volume claim provisioned for the workspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
+@ApiModel(description = "a description of the persistent volume claim provisioned for the workspace")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T11:03:36.264Z[Etc/UTC]")
 public class V1AnalyticsWorkspaceSpecJupyterWorkspacePersistentVolumeClaim {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

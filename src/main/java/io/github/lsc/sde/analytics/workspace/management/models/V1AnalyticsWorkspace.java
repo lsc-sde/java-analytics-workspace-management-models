@@ -20,6 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.github.lsc.sde.analytics.workspace.management.models.IoK8sApimachineryPkgApisMetaV1ObjectMetaV2;
 import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsWorkspaceSpec;
 import io.github.lsc.sde.analytics.workspace.management.models.V1AnalyticsWorkspaceStatus;
 import io.swagger.annotations.ApiModel;
@@ -29,8 +30,8 @@ import java.io.IOException;
 /**
  * V1AnalyticsWorkspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
-public class V1AnalyticsWorkspace implements io.kubernetes.client.common.KubernetesObject {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T11:03:36.264Z[Etc/UTC]")
+public class V1AnalyticsWorkspace {
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
   @SerializedName(SERIALIZED_NAME_API_VERSION)
   private String apiVersion;
@@ -41,7 +42,7 @@ public class V1AnalyticsWorkspace implements io.kubernetes.client.common.Kuberne
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
-  private io.kubernetes.client.openapi.models.V1ObjectMeta metadata = null;
+  private IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata = null;
 
   public static final String SERIALIZED_NAME_SPEC = "spec";
   @SerializedName(SERIALIZED_NAME_SPEC)
@@ -98,7 +99,7 @@ public class V1AnalyticsWorkspace implements io.kubernetes.client.common.Kuberne
   }
 
 
-  public V1AnalyticsWorkspace metadata(io.kubernetes.client.openapi.models.V1ObjectMeta metadata) {
+  public V1AnalyticsWorkspace metadata(IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata) {
     
     this.metadata = metadata;
     return this;
@@ -111,12 +112,12 @@ public class V1AnalyticsWorkspace implements io.kubernetes.client.common.Kuberne
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public io.kubernetes.client.openapi.models.V1ObjectMeta getMetadata() {
+  public IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 getMetadata() {
     return metadata;
   }
 
 
-  public void setMetadata(io.kubernetes.client.openapi.models.V1ObjectMeta metadata) {
+  public void setMetadata(IoK8sApimachineryPkgApisMetaV1ObjectMetaV2 metadata) {
     this.metadata = metadata;
   }
 

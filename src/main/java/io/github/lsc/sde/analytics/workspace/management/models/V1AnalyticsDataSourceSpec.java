@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * V1AnalyticsDataSourceSpec
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-03T09:52:21.861Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T11:03:36.264Z[Etc/UTC]")
 public class V1AnalyticsDataSourceSpec {
   public static final String SERIALIZED_NAME_APPROVALS = "approvals";
   @SerializedName(SERIALIZED_NAME_APPROVALS)
